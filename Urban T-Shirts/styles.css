@@ -1,0 +1,744 @@
+/* General Reset */
+body, h1, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    background: #fff;  /* White background */
+    color: #000;       /* Black text */
+    padding: 1rem 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: yellowgreen; 
+    margin-left: -250px;
+}
+
+.header .nav ul {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 250px;
+}
+
+.header .nav ul li a {
+    color: #000;  /* Black text for nav items */
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.header .nav ul li a:hover {
+    color: gray;  /* Hover effect in gray */
+}
+
+.header-icons a {
+    color: #000; /* Black color for the icons */
+    margin-left: 20px;
+    font-size: 1rem; /* Increase the icon size */
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+    left: 220px;
+}
+.header-icons a:hover {
+    color: gray; /* gray color on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./Assets/tshirt-display.jpg') no-repeat center center/cover;
+    background-size: cover; /* Ensure the image covers the area */
+    height: 50vh; /* Make the hero section fill 50% of the viewport height */
+    width: 100%; /* Full width */
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: -1; /* Sends the overlay behind the content */
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    z-index: 2; /* Ensures the content appears above the overlay */
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow for readability */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add a shadow for readability */
+}
+
+.hero-content .btn {
+    display: inline-block;
+    background: yellowgreen;
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+.hero-content .btn:hover {
+    background: #000;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+
+.featured-products {
+    background: #f9f9f9;
+    padding: 3rem 0;
+    
+}
+
+.featured-products .container {
+    text-align: center;
+    position: relative;
+    left: -130px;
+}
+
+.featured-products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    left: 130px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    
+}
+
+.product {
+    background: #fff;
+    padding: 1.5rem;
+    border: 0px solid #ddd;
+    text-align: center;
+    height: 600px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product .btn {
+    background: green;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.product .btn:hover {
+    background: #000;
+}
+
+.customer-reviews {
+    background: #fff;
+    padding: 3rem 0;
+}
+
+.customer-reviews .container {
+    text-align: center;
+}
+
+.customer-reviews h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+
+.review {
+    max-width: 350px;
+    padding: 1rem;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.review strong {
+    display: block;
+    font-size: 1rem;
+    color: green;
+}
+
+.newsletter {
+    background: gray;
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.newsletter input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.newsletter button {
+    padding: 0.75rem 1.5rem;
+    background: #000;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+}
+
+.newsletter button:hover {
+    background: #333;
+}
+
+
+
+
+.shop-by-category {
+    background: #f4f4f4;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.shop-by-category .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.shop-by-category h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.category {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.category-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.category-img img {
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-img:hover img {
+    transform: scale(1.1);
+}
+
+.category h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.category .btn {
+    display: inline-block;
+    background: green;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.category .btn:hover {
+    background: #000;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+
+
+
+/* Section styling */
+.shop-by-brand {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Container styling */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Heading styling */
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Brand grid styling */
+.brand-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Individual brand styling */
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards;
+    max-width: 150px;
+}
+
+.brand img {
+    width: 400px; /* Fixed width for uniformity */
+    height: 400px; /* Fixed height for uniformity */
+    object-fit: contain; /* Ensure the images maintain their aspect ratio */
+    margin-bottom: 10px;
+}
+
+.brand p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Animation delay for each brand */
+.brand:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.brand:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.brand:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.brand:nth-child(4) {
+    animation-delay: 3s;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* Footer Styles */
+.footer {
+    background: #000;  /* Black background */
+    color: #fff;       /* White text */
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+
+
+/*SHOP*/
+/* Promo Banner Styling */
+.promo-banner {
+    background-color: #28a745; /* Green background */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.promo-code {
+    color: #fff700; /* Yellow color for promo code */
+    font-weight: bold;
+}
+
+
+/* Shop Container Styling */
+.shop-container {
+    margin-top: 10px;
+    padding: 20px;
+}
+
+/* Section Styling */
+.section-container {
+    margin-bottom: 50px;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+   
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: green;
+    margin-bottom: 20px;
+    position: relative;
+    top: -20px;
+}
+
+/* Grid Layout for T-Shirt Items */
+.tshirt-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.tshirt-item {
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.tshirt-item:hover {
+    transform: scale(1.05);
+}
+
+.tshirt-item img {
+    width: 100%;
+    height: 300px;
+    border-bottom: 2px solid green;
+}
+
+.tshirt-item p {
+    padding: 15px;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+/* Price Styling */
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.discounted-price {
+    color: green;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/*STORY*/
+/* Main Content Styles */
+main.our-story {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: url('./Assets/background.jpeg') no-repeat center center; /* Add background image */
+    background-size: cover; /* Make the background cover the entire section */
+    color: black; /* Make the text white for better contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better focus */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add shadow to text for readability */
+  }
+  
+  /* Ensure proper spacing between paragraphs and sections */
+  main.our-story h2, main.our-story h3 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  main.our-story p {
+    margin-bottom: 20px;
+  }
+  
+  main.our-story ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  main.our-story ul li {
+    margin-bottom: 10px;
+  }
+  
+  main.our-story ul li strong {
+    color: #fff;
+  }
+  
+  /* Call-to-Action Styles */
+  .cta {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .cta .btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #222;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .cta .btn:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #222;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+
+  /*FIT*/
+  /* Outfit Gallery Styles */
+main.outfit-gallery {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main.outfit-gallery h2 {
+    margin-bottom: 10px;
+  }
+  
+  main.outfit-gallery p {
+    margin-bottom: 30px;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .gallery-item img {
+    max-width: 100%;
+    height: 400px;
+    border-radius: 8px;
+  }
+  
+  .gallery-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  /* Testimonials Section */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .testimonial-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Call-to-Action Section */
+  .call-to-action {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+  }
+  
+  .call-to-action .cta-button {
+    display: inline-block;
+    background-color: green;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .call-to-action .cta-button:hover {
+    background-color: green;
+  }
+  
+  /* FAQ Section */
+  .faq {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+  }
+  
+  .faq-item {
+    margin-bottom: 15px;
+  }
+  
+  .faq-item h4 {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  
